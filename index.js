@@ -4,11 +4,11 @@ const db = require('./config/db')
 
 const userRouter = require('./routes/register')
 
-const PORT = process.env.PORT || 5000
+const PORT = process.env.PORT || 3000
 
 
 app.use(express.json())
-app.use('/', userRouter)
+app.use('/api/v1/auth', userRouter)
 
 async function start() {
     try {
